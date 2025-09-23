@@ -2,13 +2,13 @@
 
 Comment Scout is a bot that can automatically post custom comments (Notices) on subreddit posts, with options to filter, remove, or update posts based on configurable criteria. Once a user submits a post, Comment Scout can monitor the post for a set period of time and filter or remove the post if specific criteria aren’t met, helping maintain subreddit rules or encourage user interaction. automatically post custom comments on subreddit posts, with options to filter, remove, or update posts based on configurable criteria.
 
-[post_requirements]: https://i.imgur.com/a/M4ychlp.png
+[post_requirements]: https://i.imgur.com/a/M4ychlp.jpeg
 
-[comment_requirements]: https://i.imgur.com/a/dzyEwmy.png
+[comment_requirements]: https://i.imgur.com/a/dzyEwmy.jpeg
 
-[notice]: https://i.imgur.com/a/lWVR43P.png
+[notice]: https://i.imgur.com/a/lWVR43P.jpeg
 
-[action]: https://i.imgur.com/a/iwajvQS.png
+[action]: https://i.imgur.com/a/iwajvQS.jpeg
 
 # What's New?
 
