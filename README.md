@@ -129,12 +129,10 @@ match placeholders and ``{{author_flair_template_id}}``.
 Currently, you can set:
 
 - **The delay before sending the notice (in minutes).**
-  - It seems that tasks (notices, notice removals, actions) with short 
-delays (under 10-15 minutes) can sometimes fail to execute. This might not 
-be an issue for smaller/less active subreddits, but if you are experiencing 
-problems, try a larger delay. 
-  - To alleviate this, notices with a delay of under 10 minutes 
-    will instead be sent immediately.
+  - Tasks (notices, notice removals, actions) with delays under 10-15 minutes
+    can occasionally fail to execute. To alleviate this, notices with a delay of
+    under 10 minutes will instead be sent immediately. If you are experiencing problems,
+    please try a larger delay. 
 
 - **The delay before removing the notice (in minutes).**
 
@@ -164,10 +162,10 @@ Currently, you can set:
 		  instead, which may be a bug.
 
 - **The delay before taking the action (in minutes).**
-  - It seems that tasks (notices, notices removals, actions) with short 
-delays (under 10-15 minutes) can sometimes fail to execute. This might not 
-be an issue for smaller/less active subreddits, but if you are experiencing 
-problems, try a larger delay. 
+  - Tasks (notices, notice removals, actions) with delays under 10-15 minutes
+    can occasionally fail to execute. To alleviate this, notices with a delay of
+    under 10 minutes will instead be sent immediately. If you are experiencing problems,
+    please try a larger delay. 
 
 The post will be reported instead if an invalid Flair Template ID or Removal
 Reason Name is given.
