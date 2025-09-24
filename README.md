@@ -1,7 +1,8 @@
-# Comment Scout
+# About Comment Scout
 
-Comment Scout is a bot that can automatically post custom comments (Notices) on subreddit posts, with options to filter, remove, or update posts based on configurable criteria. Once a user submits a post, Comment Scout can monitor the post for a set period of time and filter or remove the post if specific criteria aren’t met, helping maintain subreddit rules or encourage user interaction.
+Comment Scout is a flexible bot that can automatically post custom comments (Notices) on subreddit posts. Configurable criteria within the bot settings allow options for notices to be delayed, removed after a set time, distinguished, stickied, and more. Comment Scout can then automatically filter posts, remove them, or update post flairs if users do not respond to its initial notice within a configured timeframe. Comment Scout also includes whitelist and blacklist settings, allowing configuration based on post content, presence of links, flairs, and more, giving moderators precise control over how it acts.
 
+While Comment Scout can be used for a variety of purposes, the name speaks to its main goal of helping make content attribution easier. When a user submits a post, Comment Scout can comment on the post with a configurable message requesting a source for the content. Comment Scout will then monitor the post for a set period of time, keeping an eye out for the OP to provide a source. If a comment hasn't been made within the set period of time, the post can then be filtered or removed. Comment Scout can provide removal reasons if these are configured in the installation settings.
 
 [post_requirements]: https://i.imgur.com/iMZPgWd.png
 
@@ -11,31 +12,34 @@ Comment Scout is a bot that can automatically post custom comments (Notices) on 
 
 [action]: https://i.imgur.com/6Voa0Zy.png
 
-# What's New?
+# Getting Started
 
-### Notice Comment Unlocked
+Comment Scout is quick to set up in your subreddit. Follow these steps to get it running:
 
-Comment Scout's notice comments are now unlocked by default, allowing users to reply directly to them if necessary.
+1. **Install the bot**
+	- Go to the Comment Scout developer page and click **Add to community**.
+	- Select the subreddit where you want Comment Scout active.
+2. **Grant permissions**
+	- Approve the requested permissions when prompted.
+3. **Configure your settings**
+	- In the settings panel, configure the settings for whitelist/blacklist, comment requirements, notice comments, and actions. See the sections below for more details on configuration.
+4. **Test the bot**
+	- Submit a test post to your subreddit.
+	- Verify that Comment Scout reacts correctly.
+5. **Adjust settings**
+	- If needed, use the **Configuration** section to add further configuration and adjust your settings such as notice delay, auto-removal, enabling distinguishing/sticky, and more.
 
-### Optional Notice Comment Locking
-
-Functionality has been implemented into Comment Scout's settings to optionally lock the notice comment
-
-# How It Works?
-
-Comment Scout is a flexible bot that can automatically post custom comments (Notices) on subreddit posts. Configurable criteria within the bot settings allow options for notices to be delayed, removed after a set time, distinguished, stickied, and more. Comment Scout can then automatically filter posts, remove them, or update post flairs if users do not respond to its initial notice within a configured timeframe. Comment Scout also includes whitelist and blacklist settings, allowing configuration based on post content, presence of links, flairs, and more, giving moderators precise control over how it acts.
-
-While Comment Scout can be used for a variety of purposes, the name speaks to its main goal of helping make content attribution easier. When a user submits a post, Comment Scout can comment on the post with a configurable message requesting a source for the content. Comment Scout will then monitor the post for a set period of time, keeping an eye out for the OP to provide a source. If a comment hasn't been made within the set period of time, the post can then be filtered or removed. Comment Scout can provide removal reasons if these are configured in the installation settings. 
+Once configured, Comment Scout will automatically handle new submissions according to your preferences.
 
 # Configuration
 
 Currently, the bot settings consist of five sections:
 
-1) What type of filtering should the bot honor (whitelist, blacklist, both, or none)?
-2) What posts should the bot act on (whitelist), and what posts should the bot ignore (blacklist)?
-3) What type of comments should Comment Scout look for in the post and how should they be configured? 
-4) Should a notice be sent to the OP?
-5) What should be done if the OP doesn't respond to their notice?
+1. What type of filtering should the bot honor (whitelist, blacklist, both, or none)?
+2. What posts should the bot act on (whitelist), and what posts should the bot ignore (blacklist)?
+3. What type of comments should Comment Scout look for in the post and how should they be configured?
+4. Should a notice be sent to the OP?
+5. What should be done if the OP doesn't respond to their notice?
 
 ## 1. Post Requirements (White and Black List)
 
@@ -170,15 +174,20 @@ Reason Name is given.
 
 Optionally, you can also set a different action to be executed for crossposts.
 
+# What's New?
+
+### Notice Comment Unlocked
+
+Comment Scout's notice comments are now unlocked by default, allowing users to reply directly to them if necessary.
+
+### Optional Notice Comment Locking
+
+Functionality has been implemented into Comment Scout's settings to optionally lock the notice comment
+
 # What's To Come 
 
-- **Implement functionality to optionally sticky notices and removal reasons separate from 'Distinguish & Sticky' option**
-- **Implement functionality to optionally unlock removal comments by default**
-
-# Feedback/Support
-
-You can contact me (u/ItsNovrix) or visit [r/CommentScout](https://www.reddit.com/r/CommentScout) if you have any feedback or suggestions.
-You can also view the source code on [GitHub](https://github.com/ItsNovrix/comment-scout/).
+- Implement functionality to optionally sticky notices and removal reasons separate from 'Distinguish & Sticky' option
+- Implement functionality to optionally unlock removal comments by default
 
 # Changelog
 
@@ -186,3 +195,7 @@ You can also view the source code on [GitHub](https://github.com/ItsNovrix/comme
 * v0.0.11: Various updates to README and cleaning up code
 * v0.0.13: Default status of notice comments changed from locked to unlocked
 * v0.0.18: Further README updates, testing functionality of various features not yet implemented, cleaning up code
+
+# Feedback & Support
+
+If you have any feedback/suggestions or need support, feel free to message [u/ItsNovrix](https://www.reddit.com/u/ItsNovrix) or visit [r/CommentScout](https://www.reddit.com/r/CommentScout). You can also view the source code on [GitHub](https://github.com/ItsNovrix/comment-scout/).
