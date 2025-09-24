@@ -1,6 +1,7 @@
 # Comment Scout
 
-Comment Scout is a bot that can automatically post custom comments (Notices) on subreddit posts, with options to filter, remove, or update posts based on configurable criteria. Once a user submits a post, Comment Scout can monitor the post for a set period of time and filter or remove the post if specific criteria aren’t met, helping maintain subreddit rules or encourage user interaction. automatically post custom comments on subreddit posts, with options to filter, remove, or update posts based on configurable criteria.
+Comment Scout is a bot that can automatically post custom comments (Notices) on subreddit posts, with options to filter, remove, or update posts based on configurable criteria. Once a user submits a post, Comment Scout can monitor the post for a set period of time and filter or remove the post if specific criteria aren’t met, helping maintain subreddit rules or encourage user interaction.
+
 
 [post_requirements]: https://i.imgur.com/iMZPgWd.png
 
@@ -22,7 +23,7 @@ Functionality has been implemented into Comment Scout's settings to optionally l
 
 # How It Works?
 
-Comment Scout is a flexible bot that can automatically post custom notices on all posts in a subreddit. Notices can be delayed, removed after a set time, or distinguished and stickied as needed. The bot can automatically filter posts, remove them, or update post flairs if users do not respond to its initial notice within a configured timeframe. Comment Scout also includes whitelist and blacklist settings, allowing configuration based on post content, presence of links, flairs, and more, giving moderators precise control over how it acts.
+Comment Scout is a flexible bot that can automatically post custom comments (Notices) on subreddit posts. Configurable criteria within the bot settings allow options for notices to be delayed, removed after a set time, distinguished, stickied, and more. Comment Scout can then automatically filter posts, remove them, or update post flairs if users do not respond to its initial notice within a configured timeframe. Comment Scout also includes whitelist and blacklist settings, allowing configuration based on post content, presence of links, flairs, and more, giving moderators precise control over how it acts.
 
 While Comment Scout can be used for a variety of purposes, the name speaks to its main goal of helping make content attribution easier. When a user submits a post, Comment Scout can comment on the post with a configurable message requesting a source for the content. Comment Scout will then monitor the post for a set period of time, keeping an eye out for the OP to provide a source. If a comment hasn't been made within the set period of time, the post can then be filtered or removed. Comment Scout can provide removal reasons if these are configured in the installation settings. 
 
@@ -40,31 +41,35 @@ Currently, the bot settings consist of five sections:
 
 ![post_requirements]
 
-The whitelist configuration allows you to customize what posts you want Comment Scout to act on. The
+The whitelist configuration section allows you to customize what posts you want Comment Scout to act on. The
 blacklist does the opposite, allowing you to select what posts the Comment Scout should ignore. You
-can use either one, both or none if you want to disable the app.
+can use either one, both or none (if you want to disable the app).
 
 Optionally, you can choose to ignore approved, removed and/or filtered posts. 
 Deleted posts are always ignored.
 
 Currently, you can set:
 
-- **A Regex pattern the post title must match.**
-	- refer to your favourite Regex editor (e.g. https://regexr.com/).
+- **A Regex pattern that the post title must match.**
+	- Refer to your favourite Regex editor (e.g. https://regexr.com/).
+
 - **A requirement for a link in the post body.**
 	- This mainly applies to text posts that contain links - Link/Image posts
 	  don't count.
 	- Gallery/Multi-image posts are their own can of worms but long story
 	  short, this also doesn't apply to the Caption and URL fields of those.
-- **A requirement for a minimum/maximum post body length.**
+
+- **A requirement for minimum/maximum post body length.**
+
 - **A list of post flairs, one of which the post must have.**
-	- Text or Flair Template ID
+	- Flair Text or Flair Template ID can be used
+
 - **A list of user flairs, one of which the user must have.**
-	- Text or Flair Template ID
+	- Flair Text or Flair Template ID can be used
 	- Note that due to technical constraints, the user flair is checked
-	  **only** once when the post is first created - unlike other
-	  options, the app won't know if the user flair has been changed after a
-	  reminder is given and/or before an action is taken.
+	  **only** once when the post is first created. Unlike other
+	  options, Comment Scout won't know if the user flair has been changed after a
+	  notice is submitted and/or before an action is taken.
 
 ## 2. Comment Requirements
 
@@ -79,15 +84,21 @@ Deleted comments are always ignored.
 
 Currently, you can set:
 
-- **A "check non-top-level comments" toggle if you want the app to check
+- **A "check non-top-level comments" toggle if you want Comment Scout to check
   comments made in reply to top-level-comments.**
-- **A "check non-op comments" toggle if you want the app to check
+	- This option is useful for having users respond to the initial notice
+	  rather than making a new top-level comment. 
+
+- **A "check non-op comments" toggle if you want Comment Scout to check
   comments made by users other than the OP.**
-	- An Ignore List of users can be given, with comments made by the app
+	- An Ignore List of users can be configured, with comments made by Comment Scout
 	  being ignored by default.
-- **An "accept all comments" overwrite that would tell the app to accept any
+
+- **An "accept all comments" overwrite that tells Comment Scout to accept any
   comment, bypassing all comment requirements (except the above)**
-- **A Regex pattern the comment body must match.**
+
+- **A Regex pattern that the comment body must match.**
+
 - **A requirement for a link in the comment body.**
 
 If such a comment is not found, Comment Scout will send a notice comment
@@ -97,16 +108,17 @@ and/or take the given action.
 
 ![notice]
 
-You can use this feature if you want Comment Scout to make a comment to remind the
-user to take a specific action to match the requirements of your subreddit. Comment Scout
+You can use this feature if you want Comment Scout to make a comment to inform users
+to take a specific action to match the requirements of your subreddit. Comment Scout
 will check the post and comments both before scheduling the notice and before
-sending the comment. Notices are unlocked by default.
+sending the comment. Notices are unlocked by default, but can be locked if desired.
 
 Some placeholders have been implemented:
 
 - Most [AutoModerator placeholders](https://www.reddit.com/r/reddit.com/wiki/automoderator/full-documentation/)
 have been added except media placeholders,
 match placeholders and ``{{author_flair_template_id}}``.
+
 - ``{{random}}`` can be used to choose a random value from multiple given
   ones.
 
@@ -119,8 +131,11 @@ be an issue for smaller/less active subreddits, but if you are experiencing
 problems, try a larger delay. 
   - To alleviate this, notices with a delay of under 10 minutes 
     will instead be sent immediately.
+
 - **The delay before removing the notice (in minutes).**
+
 - **The contents of the notice comment.**
+
 - **Whether the notice should be distinguished, stickied and distinguished, or locked.**
 
 ## 4. Action on Missing Link/Comment
@@ -143,6 +158,7 @@ Currently, you can set:
 		  `{community_rules_url}`
 		- `{community_description}` seems to be giving the Old Reddit sidebar
 		  instead, which may be a bug.
+
 - **The delay before taking the action (in minutes).**
   - It seems that tasks (notices, notices removals, actions) with short 
 delays (under 10-15 minutes) can sometimes fail to execute. This might not 
