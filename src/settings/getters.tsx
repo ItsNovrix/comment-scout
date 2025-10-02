@@ -113,7 +113,7 @@ export async function getBlacklistSettings(context: any) {
  * Returns the Comment settings: what comment should be made.
  */
 export async function getCommentSettings(context: any) {
-	const checkNonTopLevel = Boolean(await context.settings.get("comment-level")) || false;
+	const checkTopLevel = Boolean(await context.settings.get("comment-level")) || false;
 	const checkNonOP = Boolean(await context.settings.get("comment-author")) || false;
 	const userIgnoreList = (String(await context.settings.get("comment-user-ignore")) || "") // Divide the input
 		// usernames into a string array
@@ -124,7 +124,7 @@ export async function getCommentSettings(context: any) {
 
 	if (acceptAnyComment) {
 		return {
-			checkNonTopLevel: checkNonTopLevel,
+			checkTopLevel: checkTopLevel,
 			checkNonOP: checkNonOP,
 			userIgnoreList: userIgnoreList,
 			commentRegex: null, // No regex needed
@@ -140,7 +140,7 @@ export async function getCommentSettings(context: any) {
 	                     null;
 
 	return {
-		checkNonTopLevel: checkNonTopLevel,
+		checkTopLevel: checkTopLevel,
 		checkNonOP: checkNonOP,
 		userIgnoreList: userIgnoreList,
 		commentRegex: commentRegex, // Null if no regex provided
