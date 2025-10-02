@@ -134,14 +134,14 @@ export async function checkPost(context: any, post: Post, userFlairText: string,
  * returns true if such a comment exists.
  */
 export async function checkComments(context: JobContext, post: Post, settings: {
-	checkNonTopLevel: boolean,
+	checkTopLevel: boolean,
 	checkNonOP: boolean,
 	userIgnoreList: string[],
 	commentRegex: RegExp | null,
 	bodyLinkRequired: boolean
 }, ignorePreference: string) {
 
-	const {checkNonTopLevel, checkNonOP, userIgnoreList, commentRegex, bodyLinkRequired} = settings;
+	const {checkTopLevel, checkNonOP, userIgnoreList, commentRegex, bodyLinkRequired} = settings;
 	const postAuthorID = post.authorId ? post.authorId : "";
 	let comments = await fetchAllComments(post);
 
@@ -168,8 +168,8 @@ export async function checkComments(context: JobContext, post: Post, settings: {
 
 		// Ignore comments made by the app
 		if (!(commentAuthorName === context.appName) && !userIgnoreList.includes(commentAuthorName.toLowerCase())
-		    && (checkNonOP || commentAuthorID === postAuthorID) && (checkNonTopLevel || comment.parentId.startsWith(
-				"t3_"))) {
+			&& (checkNonOP || commentAuthorID === postAuthorID) && (checkTopLevel ? comment.parentId.startsWith(
+			    "t3_") : !comment.parentId.startsWith("t3_"))) {
 
 			const regexPass = commentRegex ? commentRegex.test(comment.body) : true;
 			const bodyLinkPass = bodyLinkRequired ? containsLink(comment.body) : true;
