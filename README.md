@@ -93,7 +93,7 @@ Currently, you can set:
 	- The default setting is for Comment Scout to check non-top-level comments, requiring users to
 	  respond to the Comment Scout notice rather than making a new top-level comment. 
 
-- **A "check non-op comments" toggle if you want Comment Scout to check
+- **A "check non-OP comments" toggle if you want Comment Scout to check
   comments made by users other than the OP.**
 	- An Ignore List of users can be configured, with comments made by Comment Scout
 	  being ignored by default.
