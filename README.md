@@ -6,7 +6,7 @@ While Comment Scout can be used for a variety of purposes, the name speaks to it
 
 [post_requirements]: https://i.imgur.com/iMZPgWd.png
 
-[comment_requirements]: https://i.imgur.com/zNalaXb.png
+[comment_requirements]: https://i.imgur.com/a/ORTIqeQ.png
 
 [notice]: https://i.imgur.com/qKamT7V.png
 
