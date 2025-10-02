@@ -88,10 +88,10 @@ Deleted comments are always ignored.
 
 Currently, you can set:
 
-- **A "check non-top-level comments" toggle if you want Comment Scout to check
-  comments made in reply to top-level-comments.**
-	- This option is useful for having users respond to the initial notice
-	  rather than making a new top-level comment. 
+- **A "check top-level comments" toggle if you want Comment Scout to check
+  comments made as top-level-comments.**
+	- The default setting is for Comment Scout to check non-top-level comments, requiring users to
+	  respond to the Comment Scout notice rather than making a new top-level comment. 
 
 - **A "check non-op comments" toggle if you want Comment Scout to check
   comments made by users other than the OP.**
@@ -174,13 +174,17 @@ Optionally, you can also set a different action to be executed for crossposts.
 
 # What's New?
 
-### Notice Comment Unlocked
+### Comment Level Checking
 
-Comment Scout's notice comments are now unlocked by default, allowing users to reply directly to them if necessary.
+Functionality has been adjusted to check non-top-level comments by default and optionally check top level comments.
 
 ### Optional Notice Comment Locking
 
-Functionality has been implemented into Comment Scout's settings to optionally lock the notice comment
+Functionality has been implemented into Comment Scout's settings to optionally lock the notice comment.
+
+### Notice Comment Unlocked
+
+Comment Scout's notice comments are now unlocked by default, allowing users to reply directly to them if necessary.
 
 # What's To Come 
 
@@ -190,9 +194,11 @@ Functionality has been implemented into Comment Scout's settings to optionally l
 # Changelog
 
 * v0.0.5: Basic functionality implemented.
-* v0.0.11: Various updates to README and cleaning up code
-* v0.0.13: Default status of notice comments changed from locked to unlocked
-* v0.0.18: Further README updates, testing functionality of various features not yet implemented, cleaning up code
+* v0.0.11: Various updates to README and cleaning up code.
+* v0.0.13: Default status of notice comments changed from locked to unlocked.
+* v0.0.18: Further README updates, testing functionality of various features not yet implemented, cleaning up code.
+* v0.0.25: Official launch of public-facing bot. Latest stable version.
+* v0.0.32: Adjusted comment level checking. Non-top-level comments now checked by default, top-level comment checking can be optionally enabled.
 
 # Feedback & Support
 
