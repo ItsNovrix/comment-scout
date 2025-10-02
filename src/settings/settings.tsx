@@ -183,8 +183,8 @@ const addSettings = () => {
 				}, {
 					type: "boolean",
 					name: "comment-level",
-					label: "Check non-top-level comments?",
-					helpText: "Enable this to check comments made in response to other comments in the post."
+					label: "Check top-level comments?",
+					helpText: "Enable this to check top-level comments."
 				}, {
 					type: "boolean",
 					name: "comment-author",
