@@ -241,6 +241,7 @@ If you have any feedback/suggestions or need support, visit [r/CommentScout](htt
 **🛡️ Core Releases**
 
 * v1.0.0: Updated app to latest Devvit release. Updated README.
+* v1.0.1: Reupload of app due to app version update error.
 
 **📂 Beta Development History**
 
