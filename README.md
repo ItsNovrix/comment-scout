@@ -1,24 +1,46 @@
 # Comment Scout
 
-Comment Scout is a flexible bot that can automatically post custom comments (Notices) on subreddit posts, helping maintain subreddit rules or encourage user interaction. Configurable criteria within the bot settings allow options for notices to be delayed, removed after a set time, distinguished, stickied, and more. Comment Scout can then automatically filter posts, remove them, or update post flairs if users do not respond to its initial notice within a configured timeframe. Comment Scout also includes whitelist and blacklist settings, allowing configuration based on post content, presence of links, flairs, and more, giving moderators precise control over how it acts.
+Comment Scout is a flexible app that helps mod teams drop custom comments ("Notices") on subreddit posts and can automatically take action if users don't interact with the notices. Whether you need a simple tool to pin a Discord link, need a temporary rule reminder, or want to implement strict time-limit based enforcement for content attribution, Comment Scout handles it all seamlessly. 
+
+Configurable criteria within the bot settings allow options for notices to be delayed before being sent, removed after a set time, distinguished, stickied, and more. Comment Scout can then automatically filter posts, remove them, or update post flairs if users do not respond to its initial notice within a configured timeframe. Comment Scout also includes whitelist and blacklist settings, allowing configuration based on post content, presence of links, flairs, and more, giving moderators precise control over how it acts.
 
 While Comment Scout can be used for a variety of purposes, the name speaks to its main goal of helping make content attribution easier. When a user submits a post, Comment Scout can comment on the post with a configurable message requesting a source for the content. Comment Scout will then monitor the post for a set period of time, keeping an eye out for the OP to provide a source. If a comment hasn't been made within the set period of time, the post can then be filtered or removed. Comment Scout can provide removal reasons if these are configured in the installation settings.
+
+## ✅ What Comment Scout can do
+
+Comment Scout operates on a fairly straightforward **Target ➔ Notice ➔ Action** workflow:
+
+1. **​Target:** Choose exactly which posts the bot should act on or ignore using flexible Whitelist and Blacklist settings (filter by post content, flairs, links, and more).
+
+2. ​**Notice:** The bot automatically leaves a custom comment on matching posts. You can set these notices to stay permanently, or automatically delete themselves after a set time to keep comment sections clean.
+
+3.  ​**Action:** If enabled, Comment Scout starts a countdown clock. If the original poster fails to reply to the post within your set timeframe, the bot automatically executes your chosen action: 
+
+	- Filter the post to the mod queue.
+
+	- Remove the post entirely (with optional custom removal reasons).
+
+	- Update the post flair to a status of your choice.
+
+	- Do Nothing (perfect if you just want to leave a passive comment or let a temporary notice expire without punishing the user).
+
+**​Common Use Cases**
+
+- **Sticky Announcements & Promo:** Permanently stick and distinguish a message on every new post promoting your community Discord or upcoming AMAs.
+
+- **Rules Reminder:** Drop a standard rule reminder on specific flairs to help reduce rule-breaking comments.
+
+- **Enforce Content Attribution:** Automatically ask creators to credit their sources. If they don't reply within 30 minutes, the post is automatically removed.
+
+- **Mandatory Interaction Gate:** Require users to explain their post (similar to r/AmITheAsshole). If they don't respond to the prompt in time, the post goes to the mod queue.
 
 ---
 
 # What's New?
 
-### Comment Level Checking
+### Devvit version update
 
-Functionality has been adjusted to check non-top-level comments by default and optionally check top level comments.
-
-### Optional Notice Comment Locking
-
-Functionality has been implemented into Comment Scout's settings to optionally lock the notice comment.
-
-### Notice Comment Unlocked
-
-Comment Scout's notice comments are now unlocked by default, allowing users to reply directly to them if necessary.
+Comment Scout has been updated to the latest Devvit release for continued stability.
 
 # What's To Come 
 
@@ -208,13 +230,19 @@ This app was developed in compliance with [Reddit's Developer Terms](https://dev
 
 ---
 
-# Feedback & Support
+# 🆘 Feedback & Support
 
 If you have any feedback/suggestions or need support, visit [r/CommentScout](https://www.reddit.com/r/CommentScout).
 
 ---
 
-# Changelog
+# 🚀 Changelog
+
+**🛡️ Core Releases**
+
+* v1.0.0: Updated app to latest Devvit release. Updated README.
+
+**📂 Beta Development History**
 
 * v0.0.5: Basic functionality implemented.
 * v0.0.11: Various updates to README and cleaning up code.
