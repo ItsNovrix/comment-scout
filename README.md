@@ -242,6 +242,7 @@ If you have any feedback/suggestions or need support, visit [r/CommentScout](htt
 
 * v1.0.0: Updated app to latest Devvit release. Updated README.
 * v1.0.1: Reupload of app due to app version update error.
+* v1.0.2: Reupload of app due to Devvit release update error.
 
 **📂 Beta Development History**
 
