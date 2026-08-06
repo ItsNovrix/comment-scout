@@ -40,7 +40,9 @@ Comment Scout operates on a fairly straightforward **Target ➔ Notice ➔ Actio
 
 ### Devvit version update
 
-Comment Scout has been updated to the latest Devvit release for continued stability.
+- Comment Scout has been updated to the latest Devvit release for continued stability.
+- Updated the support subreddit link due to moving support to new subreddit.
+- Added app install/upgrade triggers to provide mod teams with usefull tips/information on install/upgrade.
 
 # What's To Come 
 
@@ -223,16 +225,16 @@ Optionally, you can also set a different action to be executed for crossposts.
 
 ## 🧾 Source & License
 
-The source code for Comment Scout is available on [GitHub](https://github.com/ItsNovrix/comment-scout).
+The source code for Comment Scout is available on [GitHub](https://github.com/ItsNovrix/Comment-Scout).
 
 This project is licensed under the [BSD-3-Clause License](https://opensource.org/licenses/BSD-3-Clause).
-This app was developed in compliance with [Reddit's Developer Terms](https://developers.reddit.com/apps/relay-app/developer-settings) and adheres to the guidelines for the Devvit platform.
+This app was developed in compliance with [Reddit's Developer Terms](https://www.redditinc.com/policies/developer-terms) and adheres to the guidelines for the Devvit platform.
 
 ---
 
 # 🆘 Feedback & Support
 
-If you have any feedback/suggestions or need support, visit [r/CommentScout](https://www.reddit.com/r/CommentScout).
+If you have any feedback/suggestions or need support, visit [r/NovrixApps](https://www.reddit.com/r/NovrixApps).
 
 ---
 
@@ -244,6 +246,7 @@ If you have any feedback/suggestions or need support, visit [r/CommentScout](htt
 * v1.0.1: Reupload of app due to app version update error.
 * v1.0.2: Reupload of app due to Devvit release update error.
 * v1.0.3: Updated app to latest Devvit release.
+* v1.0.4: Updated support subreddit link. Added install/upgrade modmail triggers.
 
 **📂 Beta Development History**
 
@@ -256,4 +259,4 @@ If you have any feedback/suggestions or need support, visit [r/CommentScout](htt
 * v0.0.33: Updated Devvit CLI version and README.
 * v0.0.34: Updated Devvit CLI version due to previous error.
 
----
+Thanks for using **Comment Scout**!
